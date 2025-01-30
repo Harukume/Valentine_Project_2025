@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
+{% block title %}Walentynki{% endblock %}
 {% block content %}
 <div class="px-3 py-4 my-4 text-center" >
     <img class="d-block mx-auto mb-4" src="{{url_for('static',filename='images/heart_logo.png')}}" alt="heart" width="100" >
@@ -9,8 +9,10 @@
           szczerych!
       </p>
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-        <button type="button" class="btn btn-primary btn-lg px-4 gap-3"  id="YesButton" onclick="YesFunc()">Tak</button>
-        <button type="button" class="btn btn-outline-secondary btn-lg px-4" id="NoButton" onclick="NoFunc()">Nie</button>
+          <a href="{{url_for('date')}}">
+            <button type="button" class="btn btn-primary btn-lg px-4 gap-3" role="link" id="YesButton" onclick="YesFunc()" >Tak</button>
+          </a>
+            <button type="button" class="btn btn-outline-secondary btn-lg px-4" role="link" id="NoButton" onclick="NoFunc()" href="/date/2">Nie</button>
       </div>
     </div>
   </div>
@@ -34,5 +36,6 @@
  
       
     };
+
 </script>
 {% endblock %}

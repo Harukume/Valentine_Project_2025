@@ -1,0 +1,128 @@
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+<h1 class="display-5 fw-bold text-body-emphasis center-me">	&#10084; Jak chcesz spędzić walentynki? &#10084;</h1>
+<div class="album py-5 bg-body-tertiary">
+  <form method="post" action="{{ url_for('date') }}">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" aria-label="HomeCinema" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <image width="100%"  x="0" y="-50" href="{{url_for('static', filename='images/home_cinema.jpg')}}" />
+              <title>Kino Domowe</title>
+            </svg>
+            <div class="card-body">
+              <h4>Kino domowe</h4>
+              <p class="card-text">Wybierasz film Misiu albo nawet kilka, do tego duzio tulenia :3 </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="submit" class="btn btn-sm btn-primary" name="Cinema" value="Cinema">Wybierz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" aria-label="HomeCinema" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <image width="100%"  x="0" y="0" href="{{url_for('static', filename='images/walk_in_park.jpg')}}" />
+              <title>Spacer</title>
+            </svg>
+            <div class="card-body">
+              <h4>Wspólne wyjście na spacer</h4>
+              <p class="card-text">Zakładając, że pogoda dopisze - wspólne pochodzenie bez celu np. do parku</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="submit" class="btn btn-sm btn-primary" name="Walk" value="Walk">Wybierz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" aria-label="HomeCinema" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <image width="100%"  x="0" y="-50" href="{{url_for('static', filename='images/clay_date.jpg')}}" />
+              <title>Randka z modeliną</title>
+            </svg>
+            <div class="card-body">
+              <h4>Randka z modeliną/plasteliną</h4>
+              <p class="card-text">Zakupi się modelinę i pobawimy się w tworzenie różnych rzeczy np. mini kaczuszek</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="submit" class="btn btn-sm btn-primary" name="Clay" value="Clay">Wybierz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" aria-label="HomeCinema" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <image width="100%"  x="0" y="-50" href="{{url_for('static', filename='images/tft.jpg')}}" />
+              <title>TFT Duo </title>
+            </svg>
+            <div class="card-body">
+              <h4>TFT DUO</h4>
+              <p class="card-text">Wbijanie rangi w TFT DUO (to jest też opcjonalnie zawsze) </p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="submit" class="btn btn-sm btn-primary" name="TFT" value="TFT">Wybierz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" aria-label="HomeCinema" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <image width="100%"  x="0" y="-50" href="{{url_for('static', filename='images/sleeping.jpg')}}" />
+              <title>Lazy</title>
+            </svg>
+            <div class="card-body">
+              <h4>Leniuchowanie w domu</h4>
+              <p class="card-text">Jak nazwa wskazuje, wspólne nic nie robienie, najwyżej jedzenie i picie</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="submit" class="btn btn-sm btn-primary" name="Lazy_Day" value="Lazy_Day">Wybierz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" aria-label="HomeCinema" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <image width="100%"  x="0" y="-30" href="{{url_for('static', filename='images/mystery_choice.jpg')}}" />
+              <title>Inna opcja</title>
+            </svg>
+            <div class="card-body">
+              <h4>Inna propozycja (twoja)</h4>
+              <p class="card-text">Możesz wybrać inną rzecz na jaką masz ochotę (i nie ja nie wybieram)</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <input type="text" placeholder="Wpisz i kliknij guzik"
+                   name="anotherChoice">
+                  <button type="submit" class="btn btn-sm btn-primary" name="Proposition" value="Proposition">Wybierz</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </form>
+    </div>
+
+  </div>
+{% endblock content%}

@@ -9,6 +9,10 @@ html, body{
 .text-center{
       background-color: #FFDEE3;
 }
+.center-me{
+    text-align: center;
+
+}
 
 .btn-primary{
       background-color: #FF3334;
