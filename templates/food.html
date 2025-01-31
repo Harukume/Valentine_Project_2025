@@ -2,7 +2,27 @@
 {% block title %}Co jemy{% endblock %}
 
 {% block content %}
-<h1> &#127828; To co jemy? &#127835; </h1>
+<h1 class="center-me"> &#127828; To co jemy? &#127835; </h1>
+
+<div class="food-display">
+    <div id="food1">
+        <img src="{{url_for('static', filename='images/food/burger.jpg')}}" alt="burger">
+    </div>
+    <div id="food2">
+        <img src="{{url_for('static', filename='images/food/chinese_food.jpg')}}" alt="chinese_food">
+    </div>
+    <div id="food3">
+        <img src="{{url_for('static', filename='images/food/indian.jpg')}}" alt="indian">
+    </div>
+    <div id="food4">
+        <img src="{{url_for('static', filename='images/food/pizza.jpg')}}" alt="pizza">
+    </div>
+    <div id="food5">
+        <img src="{{url_for('static', filename='images/food/ramen.jpg')}}" alt="ramen">
+    </div>
+
+</div>
+// pizza, ramen, indyjska, chińczyk, burger
 {% endblock %}
 
 nie działa

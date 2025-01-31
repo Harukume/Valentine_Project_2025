@@ -43,7 +43,7 @@ def date():
             print("Error: Something is wrong")
         print(f"Wybrał: {date}")
         InfoToSend["TypeOfDate"] = date
-        return url_for('food')
+        return redirect(url_for('food'))
 
     elif request.method == 'GET':
         time.sleep(5)
@@ -59,4 +59,4 @@ def food():
 
 #TODO Wysyłanie odpowiedzi na maila
 
-app.run()
+app.run(debug=True)

@@ -41,3 +41,11 @@ img {
      width: 300px;
 
 }
+
+.food-display{
+    display: grid;
+}
+.food-display img{
+    height: 300px;
+    border-radius: 50%;
+}
