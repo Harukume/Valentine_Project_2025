@@ -16,13 +16,13 @@
       </div>
     </div>
   </div>
-<div class="px-4 video" id="video"></div>
+<div class="px-3 video d-block mx-auto mb-3" id="video"></div>
 <div id="music"></div>
 
 <script>
     function YesFunc(){
     // show happy GIF and play music
-      document.getElementById('video').innerHTML = "<div class='video'><img src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHllNmpjZDgzcjEwNHFlYXB6cmFjNW94MGU3Mnc4cXpxazRtcmlubSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8QbwUh40Hl96yMgvOx/giphy.gif'></div>";
+      document.getElementById('video').innerHTML = "<img src='https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMHllNmpjZDgzcjEwNHFlYXB6cmFjNW94MGU3Mnc4cXpxazRtcmlubSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8QbwUh40Hl96yMgvOx/giphy.gif'>";
 
       document.getElementById('music').innerHTML = "<audio src='{{url_for('static',filename='music/careless_whispers.mp3')}}' autoplay volume='0.5'><p>If you are reading this, it is because your browser does not support the audio element.     </p></audio>";
       document.getElementById('NoButton').style.display='none';
@@ -30,7 +30,7 @@
 
     function NoFunc(){
       // show sad GIF and play music
-      document.getElementById('video').innerHTML = "<div class='video'><img src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXpsZm54NHNsd3V4aDZxeDM4dDJncGp3OGRrcjM2NGdwa3V2cWVzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/98MaHVwJOmWMz4cz1K/giphy.gif'></div>"
+      document.getElementById('video').innerHTML = "<img src='https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXpsZm54NHNsd3V4aDZxeDM4dDJncGp3OGRrcjM2NGdwa3V2cWVzdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/98MaHVwJOmWMz4cz1K/giphy.gif'>"
 
       document.getElementById('music').innerHTML = "<audio src='{{url_for('static',filename='music/sad_hamster.mp3')}}' autoplay volume='0.5'><p>If you are reading this, it is because your browser does not support the audio element.     </p></audio>";
  

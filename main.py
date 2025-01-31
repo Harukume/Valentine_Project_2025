@@ -7,6 +7,13 @@ import time
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
 
+#returned info
+InfoToSend = {
+    "TypeOfDate": "",
+    "MainFood": "",
+    "Dessert": "",
+}
+
 
 #Will you be mine valentine? Question with effects like gif and music
 @app.route("/")  #Main pytanie
@@ -14,33 +21,39 @@ def home():
     return render_template("index.html")
 
 
-#TODO Co chcesz zrobić
+#What do you want to do on Valentine day (Type of activity)
 
 @app.route("/date", methods=['GET', 'POST'])
 def date():
+    date = ""
     if request.method == "POST":
         if request.form.get('Cinema') == 'Cinema':
-            print("Wybrał kino")
+            date = "Kino"
         elif request.form.get('Walk') == 'Walk':
-            print("Wybrał spacer")
+            date = "Spacer"
         elif request.form.get('Clay') == 'Clay':
-            print("Wybrał modelinę")
+            date = "Modelina"
         elif request.form.get('TFT') == 'TFT':
-            print("Wybrał TFT")
+            date = "TFT"
         elif request.form.get('Lazy_Day') == 'Lazy_Day':
-            print("Wybrał leniuchowanie")
+            date = "Leniuchowanie"
         elif request.form.get('Proposition') == 'Proposition':
-            hisChoice = request.form.get('anotherChoice')
-            print(f"Wybrał: {hisChoice}")
+            date = request.form.get('anotherChoice')
         else:
             print("Error: Something is wrong")
-        return render_template("index.html")
+        print(f"Wybrał: {date}")
+        InfoToSend["TypeOfDate"] = date
+        return url_for('food')
+
     elif request.method == 'GET':
         time.sleep(5)
         return render_template("date.html")
 
 
 #TODO Co jemy
+@app.route("/food", methods=["GET", "POST"])
+def food():
+    return render_template("food.html")
 
 #TODO Co na deser
 
