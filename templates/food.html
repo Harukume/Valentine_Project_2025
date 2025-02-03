@@ -9,20 +9,22 @@
         <div id="food1">
             <button type="submit" class="btn btn-sm btn-primary center-me" name="Burger" value="Burger">Burgerki </button>
             <img src="{{url_for('static', filename='images/food/burger.jpg')}}" alt="burger">
-            
-            
         </div>
         <div id="food2">
+            <button type="submit" class="btn btn-sm btn-primary center-me" name="Chinese_Food" value="Chinese_Food">Chińczyk</button>
             <img src="{{url_for('static', filename='images/food/chinese_food.jpg')}}" alt="chinese_food">
         </div>
         <div id="food3">
-            <input type="text">
-            <input type="submit">
+            <h3 id="food3-1"> Oczywiście możesz też podać własną propozycję (ale i tak wybierasz coś, wybór aka że wybierze Wikuś nie wchodzi w grę -.-) </h3>
+            <input type="text" placeholder="Wpisz i kliknij guzik" size="30"  name="anotherChoice">
+            <button type="submit" class="btn btn-sm btn-primary" name="Proposition" value="Proposition">Wybierz</button>
         </div>
         <div id="food4">
+            <button type="submit" class="btn btn-sm btn-primary center-me" name="Pizza" value="Pizza">Pizza</button>
             <img src="{{url_for('static', filename='images/food/pizza.jpg')}}" alt="pizza">
         </div>
         <div id="food5">
+            <button type="submit" class="btn btn-sm btn-primary center-me" name="Indian_Food" value="Indian_Food">Indyjska kuchnia</button>
             <img src="{{url_for('static', filename='images/food/indian.jpg')}}" alt="indian">
         </div>
     
