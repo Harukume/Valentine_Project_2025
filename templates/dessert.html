@@ -1,7 +1,28 @@
 {% extends "base.html" %}
+{% block head %}
+<link href="{{url_for('static',filename='css/design_animation.css')}}" rel="stylesheet">
+<script>
+/* Set the width of the sidebar to 250px (show it) */
+function openNav() {
+  document.getElementById("mySidepanel").style.width = "100%";
+}
+
+/* Set the width of the sidebar to 0 (hide it) */
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+
+}
+</script>
+{% endblock %}
 {% block title %}Deser{% endblock %}
 
 {% block content %}
-A tu niespodzianka
+<div id="mySidepanel" class="sidepanel">
+  <h1> No to ostatnia prosta! Możesz chwilę odpocząć albo sprawdzić co Cię czeka dalej &#129473; °˖✧◝(⁰▿⁰)◜✧˖°</h1>
+  <div id="myButton"> <button class="hidebtn btn btn-sm btn-primary" onclick="closeNav()">&#x2190;</button> </div>
+
+  
+</div>
+
 {% endblock %}
 {% block content2 %}{% endblock %}
