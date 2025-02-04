@@ -76,12 +76,13 @@ body{
     background-color: rgba(0,0,0,0.4);
     border-radius: 50%;
     top: 90px;
-    left: -1px;
+    left: -50px;
 
 }
 
 .gift{
   position: absolute;
+  left: -43px;
   width:150px;
   height: 100px;
   background-color: #FFDEE3;
@@ -95,7 +96,7 @@ body{
   width:25px;
   height: 100px;
   background-color: #FF3334;
-  left: 62px; 
+  left: 62px;
 }
 
 .gift::after{
