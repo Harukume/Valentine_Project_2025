@@ -2,17 +2,40 @@
 {% block head %}
 <link href="{{url_for('static',filename='css/design_animation.css')}}" rel="stylesheet">
 <script>
-/* Set the width of the sidebar to 250px (show it) */
 function openNav() {
-  document.getElementById("mySidepanel").style.width = "100%";
+    let panel = document.getElementById("mySidepanel");
+    panel.style.display = "block";
+
+    setTimeout(() => {
+        panel.style.width = "100%";
+        panel.style.opacity = "1";   // Show panel
+    }, 10); // latency
 }
 
-/* Set the width of the sidebar to 0 (hide it) */
 function closeNav() {
-  document.getElementById("mySidepanel").style.width = "0";
-  document.getElementById("mySidepanel").style.display = "none";
+    let panel = document.getElementById("mySidepanel");
+    panel.style.width = "0";        // hiding panel
+    panel.style.opacity = "0";      // lowering opacity
 
+    setTimeout(() => {
+        panel.style.display = "none";
+    }, 2000);
+  }
+
+document.addEventListener("click", myFunction);
+function showMessage() {
+  let panel = document.getElementById("love-card");
+  setTimeout(() => {
+        panel.style.opacity = "1";   // Show panel
+    }, 2000); // latency
+
+
+    // Flask email
+    fetch("{{ url_for('message') }}", { method: "POST" })
+    .then(response => console.log("Email request sent"))
+    .catch(error => console.error("Error:", error));
 }
+
 </script>
 {% endblock %}
 {% block title %}Deser{% endblock %}
@@ -28,9 +51,13 @@ function closeNav() {
 
   <div class="giftcontainer">
     <div class="gift">
-      <input type="checkbox" id="click">
+        <input type="checkbox" id="click" onclick="showMessage()">
       <label for="click" class="click"></label>
-      <div class="suprise">A na deser Wikuś kucharz coś przyrządzi &#128516;</div>
+      <div class="suprise">A secret message&#128516;</div>
     </div>
+  </div>
+
+  <div class="love-card center-me" id="love-card">
+    <h1>&#10084;</h1>
   </div>
 {% endblock %}

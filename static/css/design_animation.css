@@ -1,7 +1,7 @@
 /* The sidepanel menu */
 .sidepanel {
-  height: 100%; /* Specify a height */
-  width: 100%; /* 0 width - change this with JavaScript */
+  height: 100vh; /* Specify a height */
+  width: 100%; /* 100 width - change this with JavaScript */
   position: fixed; /* Stay in place */
   z-index: 2; /* Stay on top */
   top: 0;
@@ -9,7 +9,8 @@
   background-color: #FF8896;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+  transition: width 1.5s, opacity 5s; /* 0.5 second transition effect to slide in the sidepanel */
+  opacity: 100;
 }
 
 /* The sidepanel text*/
@@ -18,9 +19,8 @@
   font-size: 50px;
   color: #C00000;
   display: block;
-  transition: 0.3s;
+  transition: 0.5s;
   text-align: center;
-  margin:auto;
   justify-content:center;
   align-items:center;
   margin-top: 15%
@@ -29,9 +29,9 @@
 /* Position and style the close button (center) */
 .sidepanel .hidebtn {
 
+  cursor: pointer;
   height: 150px;
   width: 150px;
-  margin:auto;
 
   font-size: 36px;
   border: none;
@@ -59,7 +59,6 @@ body{
     min-height:100vh;
     overflow: hidden;
     width:100%;
-
  
 }
 .giftcontainer{
@@ -108,6 +107,7 @@ body{
 }
 
 #click{
+  cursor: pointer;
   display: none;
 }
 
@@ -177,4 +177,15 @@ body{
     max-width: 480px;
     transform: translateY(-100px) translateX(5px) scale(1);
   }
+}
+
+.love-card{
+    position:absolute;
+    bottom: 200px;
+    opacity: 0;
+
+}
+
+#love-card{
+    transition: opacity 2s ;
 }
